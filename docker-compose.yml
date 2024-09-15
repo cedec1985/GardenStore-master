@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+    backend:
+        image: nginx
+        container_name: proj.gardenstore
+        build:
+            context: ./proj.gardenstore
+        ports:
+            - "80:80"
+    frontend:
+        image: node
+        container_name: gardenstore
+        build:
+            context: ./gardenstore
+        ports:
+            - "4200:80"
+        depends_on:
+            - backend
+
