@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, catchError, tap } from 'rxjs';
-import { Article } from '../../../models/article';
 import { ProduitDTO } from '../../../models/dto/produit.dto';
 
 @Component({
   selector: 'app-accessoiresdetails',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClient],
   templateUrl: './accessoiresdetails.component.html',
   styleUrl: './accessoiresdetails.component.css'
 })
