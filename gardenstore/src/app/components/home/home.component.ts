@@ -50,10 +50,10 @@ export class HomeComponent {
    findAllCategories() {
      this.categoryService.findAllCategories()
        .pipe()
-       .subscribe(data => {
+       .subscribe((data: Category[]) => {
          console.log("Category from database : ",data);
          this.listCategory = data;
-       }, error => {
+       }, (error: any) => {
          console.log(error);
        });
    }
