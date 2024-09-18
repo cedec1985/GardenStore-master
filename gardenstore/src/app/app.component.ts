@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
@@ -34,8 +34,8 @@ import { ContactComponent } from './components/contact/contact.component';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers: [AuthService,CookieService,PanierService],
-    imports: [CommonModule, RouterOutlet, ReactiveFormsModule,HttpClientModule,RouterLink,
+    providers: [AuthService,CookieService,PanierService,HttpClient],
+    imports: [CommonModule, RouterOutlet, ReactiveFormsModule,RouterLink, RouterOutlet,
        HomeComponent,NavbarComponent, CartComponent,AdminComponent,ConnexionComponent, AchattermineComponent,ConfirmationComponent,ProduitresultComponent,StockEpuiseDirective,FormsModule,ReactiveFormsModule,
         RegisterComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,CategoryComponent,ProfilUserComponent,StockEpuiseDirective,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent]
       })

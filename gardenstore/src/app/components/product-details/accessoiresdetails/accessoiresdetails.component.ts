@@ -2,15 +2,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClient} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, catchError, tap } from 'rxjs';
+import { Observable,tap } from 'rxjs';
 import { ProduitDTO } from '../../../models/dto/produit.dto';
 
 @Component({
   selector: 'app-accessoiresdetails',
   standalone: true,
-  imports: [CommonModule, HttpClient],
-  templateUrl: './accessoiresdetails.component.html',
-  styleUrl: './accessoiresdetails.component.css'
+  imports: [CommonModule],
+  providers: [HttpClient],
+  styleUrls: ['./accessoiresdetails.component.css'],
+  templateUrl: './accessoiresdetails.component.html'
 })
 export class AccessoiresdetailsComponent implements OnInit {
   apiUrl = 'http://localhost:8080/produit';
