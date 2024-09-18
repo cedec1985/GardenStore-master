@@ -6,6 +6,7 @@ import { ProduitDTO } from '../../../models/dto/produit.dto';
 import { Observable, tap } from 'rxjs';
 
 
+
 @Component({
   selector: 'app-outillagedetails',
   standalone: true,
