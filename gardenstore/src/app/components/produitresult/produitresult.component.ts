@@ -15,7 +15,7 @@ import { PlantesdetailsComponent } from '../product-details/plantesdetails/plant
   selector: 'app-produitresult',
   templateUrl: './produitresult.component.html',
   styleUrls: ['./produitresult.component.css'],
-  imports: [CommonModule,ReactiveFormsModule,FormsModule,RouterModule,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent],
+  imports: [CommonModule],
   standalone: true
 })
 export class ProduitresultComponent{
