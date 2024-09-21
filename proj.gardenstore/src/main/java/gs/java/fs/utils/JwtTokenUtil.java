@@ -11,7 +11,7 @@ import java.util.Date;
     public class JwtTokenUtil {
         private static final long EXPIRE_DURATION = 24 * 60 * 60 * 1000; // 24 hour
 
-        private final byte[] secret = "C#sLuAwsf/X?yjVQ*UZ+Ty&f>1<RHo-Vd4DvQX)QVe@#+G?AOQ~ZjQ~q'0JAa(nIQ}_Xk0cgM'>!$W`>MBRc^{o<cL'OGnh@<p}WziAK=WZ\"b='r)uQ+[!ZPywM&RR".getBytes(StandardCharsets.UTF_8);
+       final byte[] secret = "C#sLuAwsf/X?yjVQ*UZ+Ty&f>1<RHo-Vd4DvQX)QVe@#+G?AOQ~ZjQ~q'0JAa(nIQ}_Xk0cgM'>!$W`>MBRc^{o<cL'OGnh@<p}WziAK=WZ\"b='r)uQ+[!ZPywM&RR".getBytes(StandardCharsets.UTF_8);
 
         public String generateAccessToken(Client client) {
             return Jwts.builder()

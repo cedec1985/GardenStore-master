@@ -7,7 +7,7 @@ import jakarta.validation.ConstraintValidatorContext;
 public class PasswordValidator implements ConstraintValidator<Password, String> {
 
 
-    private int minSize;
+    int minSize;
 
     @Override
     public void initialize(Password constraintAnnotation) {
