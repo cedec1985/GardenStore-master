@@ -40,12 +40,12 @@ import { HttpClient} from '@angular/common/http';
 @NgModule({
   declarations: [],
   
-  imports: [CommonModule,AppComponent,NavbarComponent, HomeComponent,ProfiluserModule, FormsModule, ReactiveFormsModule, RouterModule,
+  imports: [AppComponent,NavbarComponent, HomeComponent,
     RegisterComponent,ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
-    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,BrowserAnimationsModule,
-    ProfiluserRoutingModule,ProfiluserModule,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
+    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,
+ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
   
-  exports: [TableModule,HomeComponent,AppComponent,NavbarComponent,RegisterComponent,FormsModule, ReactiveFormsModule,StockEpuiseDirective,
+  exports: [HomeComponent,AppComponent,NavbarComponent,RegisterComponent,StockEpuiseDirective,
     ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserDisplayComponent,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent],
     

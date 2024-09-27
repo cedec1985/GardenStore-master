@@ -1,0 +1,206 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class Addresse {
+  - addresseRue: String
+  - addresseVille: String
+  - addresseCodepostal: Integer
+  - addresseNumero: Integer
+}
+entity AddresseForm << record >> {
+  - addresseVille: String
+  - addresseRue: String
+  - addresseNumero: Integer
+  - addresseCodepostal: Integer
+}
+class AuthRequest {
+  - email: String
+  - password: String
+}
+class AuthResponse {
+  - email: String
+  - accessToken: String
+}
+class BCryptUtils
+class Categorie {
+  - id: Long
+}
+class Client {
+  - addresse: Addresse
+  - password: String
+  - id: Long
+  - nom: String
+  - telephone: Integer
+  - mail: String
+  - client: Client
+  - prenom: String
+}
+class ClientController {
+  ~ authManager: AuthenticationManager
+  ~ jwtUtil: JwtTokenUtil
+  - clientService: ClientService
+}
+entity ClientDTO << record >> {
+  - nom: String
+  - prenom: String
+  - telephone: Integer
+  - mail: String
+  - id: Long
+  - addresse: Addresse
+}
+class ClientException
+entity ClientForm << record >> {
+  - telephone: Integer
+  - nom: String
+  - mail: String
+  - prenom: String
+  - password: String
+  - addresse: AddresseForm
+}
+class ClientNotFoundException
+interface ClientRepository << interface >>
+interface ClientService << interface >>
+class ClientServiceImpl {
+  - clientRepository: ClientRepository
+}
+class Commande {
+  - id: Long
+  - dateCommande: LocalDate
+  - nCommande: Integer
+  - quantite: Integer
+  - deliveredBy: Livreur
+  - montant: Integer
+}
+class CommandeController {
+  - commandeService: CommandeService
+}
+entity CommandeDTO << record >> {
+  - montant: Integer
+  - id: Long
+  - quantite: Integer
+  - dateCommande: LocalDate
+  - nCommande: Integer
+}
+entity CommandeForm << record >> {
+  - n_commande: Integer
+  - quantité: Integer
+  - date_commande: LocalDate
+  - delivered_by_livreur_id: Livreur
+  - id: Long
+  - montant: Integer
+}
+interface CommandeRepository << interface >>
+interface CommandeService << interface >>
+class CommandeServiceImpl {
+  - commandeRepository: CommandeRepository
+}
+class CustomUserDetailsService {
+  - clientRepository: ClientRepository
+}
+enum Description << enumeration >> {
+  + OUTILLAGE: 
+  + ACCESSOIRES: 
+  + PLANTES: 
+  + MOBILIER: 
+}
+annotation Email << annotation >>
+class EmailValidator {
+  - pattern: Pattern
+  - matcher: Matcher
+  - EMAIL_PATTERN: String
+}
+class JwtTokenUtil {
+  ~ secret: byte[]
+  - EXPIRE_DURATION: long
+}
+class Livreur {
+  - prénom: String
+  - id: Long
+  - nomContact: String
+  - commandes: List<Commande>
+  - societe: String
+  - email: String
+  - nom: String
+}
+class LivreurController {
+  - livreurService: LivreurService
+}
+entity LivreurDTO << record >> {
+  - nom: String
+  - prénom: String
+  - email: String
+  - nomContact: String
+  - societe: String
+  - id: Long
+}
+entity LivreurForm << record >> {
+  - prénom: String
+  - nom: String
+  - nom_contact: String
+  - email: String
+  - societe: String
+}
+interface LivreurRepository << interface >>
+interface LivreurService << interface >>
+class LivreurServiceImpl {
+  - livreurRepository: LivreurRepository
+}
+class Main
+class OpenAPIConfig
+annotation Password << annotation >>
+class PasswordValidator {
+  ~ minSize: int
+}
+class Produit {
+  - stock: Integer
+  - categorie: Description
+  - nom: String
+  - id: Long
+  - prixDeVente: Integer
+  - reference: Integer
+  - avis: String
+}
+class ProduitController {
+  - produitService: ProduitService
+}
+entity ProduitDTO << record >> {
+  - reference: Integer
+  - id: Long
+  - avis: String
+  - categorie: Description
+  - stock: Integer
+  - prixDeVente: Integer
+  - nom: String
+}
+entity ProduitForm << record >> {
+  - nom: String
+  - stock: Integer
+  - reference: Integer
+  - prixDeVente: Integer
+  - avis: String
+  - categorie: Description
+  - id: Long
+}
+interface ProduitRepository << interface >>
+interface ProduitService << interface >>
+class ProduitServiceImpl {
+  - produitRepository: ProduitRepository
+}
+class SecurityConfig
+interface SecurityConfigs << interface >>
+annotation Username << annotation >>
+class UsernameValidator {
+  - pattern: Pattern
+  - FORBIDDEN_USERNAMES: String[]
+  - matcher: Matcher
+  - USERNAME_PATTERN: String
+}
+
+ClientServiceImpl         -[#008200,dashed]-^  ClientService            
+CommandeServiceImpl       -[#008200,dashed]-^  CommandeService          
+LivreurServiceImpl        -[#008200,dashed]-^  LivreurService           
+ProduitServiceImpl        -[#008200,dashed]-^  ProduitService           
+@enduml

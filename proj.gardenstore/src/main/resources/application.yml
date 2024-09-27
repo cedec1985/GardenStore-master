@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5434/gardenstore_db
-    username: cédric
-    password: simcity1985
+    url: jdbc:postgresql://5432:5432/gardenstore_db
+    username: cedric
+    password: simplicity1985
     driver-classname: org.postgresql.Driver
   jpa:
     hibernate:

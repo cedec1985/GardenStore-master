@@ -12,11 +12,11 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="8845c925-0dc1-4d11-af10-94f0ea040088">
+    <connection id="074811eb-3421-4f2b-8434-24e7e71509aa">
       <console name="gardenstore_db" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -27,7 +27,7 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="8845c925-0dc1-4d11-af10-94f0ea040088" />
+    <connection id="074811eb-3421-4f2b-8434-24e7e71509aa" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="8845c925-0dc1-4d11-af10-94f0ea040088" dataset="public.client" active-filter-id="EMPTY_FILTER" />
@@ -38,6 +38,10 @@
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/cc1efd8f-5bba-4049-8105-dd7a639130c5/console.sql" connection-id="074811eb-3421-4f2b-8434-24e7e71509aa" session-id="MAIN" current-schema="gardenstore_db" />
+    <mapping file-url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c8048547-062c-4553-bcde-f56cf43d65ae/console.sql" connection-id="074811eb-3421-4f2b-8434-24e7e71509aa" session-id="MAIN" current-schema="gardenstore_db" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -58,35 +62,35 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="8845c925-0dc1-4d11-af10-94f0ea040088" active="true" signed="true">
+      <connection id="074811eb-3421-4f2b-8434-24e7e71509aa" active="true" signed="true">
         <database>
           <name value="gardenstore_db" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="16.1" />
+          <database-version value="9999.0" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
-          <port value="5434" />
+          <port value="5432" />
           <database value="gardenstore_db" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
-          <user value="cédric" />
-          <deprecated-pwd value="c2ltY2l0eTE5ODU=" />
+          <user value="cedric" />
+          <deprecated-pwd value="c2ltcGxpY2l0eTE5ODU=" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />
-          <proxy-host value="" />
+          <proxy-host value="localhost" />
           <proxy-port value="22" />
-          <proxy-user value="" />
-          <deprecated-proxy-pwd value="" />
+          <proxy-user value="cedric" />
+          <deprecated-proxy-pwd value="c2ltcGxpY2l0eTE5ODU=" />
           <auth-type value="PASSWORD" />
           <key-file value="" />
           <key-passphrase value="" />
@@ -102,7 +106,7 @@
           <session-management value="true" />
           <ddl-file-binding value="true" />
           <database-logging value="true" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="false" />
           <environment-type value="default" />
@@ -206,9 +210,9 @@
       <lookup-filters>
         <lookup-objects>
           <object-type name="SCHEMA" enabled="true" />
-          <object-type name="USER" enabled="false" />
-          <object-type name="ROLE" enabled="false" />
-          <object-type name="PRIVILEGE" enabled="false" />
+          <object-type name="USER" enabled="true" />
+          <object-type name="ROLE" enabled="true" />
+          <object-type name="PRIVILEGE" enabled="true" />
           <object-type name="CHARSET" enabled="false" />
           <object-type name="TABLE" enabled="true" />
           <object-type name="VIEW" enabled="true" />

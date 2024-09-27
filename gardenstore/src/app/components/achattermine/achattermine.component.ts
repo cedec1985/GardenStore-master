@@ -9,8 +9,7 @@ import { LivreurService } from '../../services/livreur.service';
   selector: 'app-achattermine',
   templateUrl: './achattermine.component.html',
   styleUrls: ['./achattermine.component.css'],
-
-  imports: [CommonModule,ReactiveFormsModule,FormsModule,RouterModule],
+  imports :[CommonModule,ReactiveFormsModule,FormsModule,RouterModule],
   standalone: true
 })
 export class AchattermineComponent implements OnInit{
