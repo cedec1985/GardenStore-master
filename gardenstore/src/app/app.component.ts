@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient} from '@angular/common/http';
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { AchattermineComponent } from './components/achattermine/achattermine.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -35,7 +35,7 @@ import { ContactComponent } from './components/contact/contact.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     providers: [AuthService,CookieService,PanierService,HttpClient],
-    imports: [CommonModule, RouterOutlet, ReactiveFormsModule,RouterLink, RouterOutlet,
+    imports: [CommonModule, RouterOutlet, ReactiveFormsModule,RouterLink, RouterOutlet,FormsModule,
        HomeComponent,NavbarComponent, CartComponent,AdminComponent,ConnexionComponent, AchattermineComponent,ConfirmationComponent,ProduitresultComponent,StockEpuiseDirective,FormsModule,ReactiveFormsModule,
         RegisterComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,CategoryComponent,ProfilUserComponent,StockEpuiseDirective,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent]
       })

@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 import { LivreurService } from '../../services/livreur.service';
 
 @Component({
-  selector: 'app-achattermine',
+  selector: 'app-achattermine', 
+  standalone: true,
   templateUrl: './achattermine.component.html',
   styleUrls: ['./achattermine.component.css'],
   imports :[CommonModule,ReactiveFormsModule,FormsModule,RouterModule],
-  standalone: true
 })
 export class AchattermineComponent implements OnInit{
   registerForm!: FormGroup;
