@@ -44,9 +44,10 @@ import { HttpClient} from '@angular/common/http';
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,
 ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
   
-  exports: [HomeComponent,AppComponent,NavbarComponent,RegisterComponent,StockEpuiseDirective,
-    ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
-    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserDisplayComponent,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent],
+  exports: [AppComponent,NavbarComponent, HomeComponent,ReactiveFormsModule,FormsModule,ProfiluserRoutingModule,CommonModule,RouterModule,BrowserAnimationsModule,TableModule,
+    RegisterComponent,ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
+    AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,
+ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
     
   providers: [AuthService,CookieService,PanierService,CategoriesmockService,CategoryService,HttpClient],
   bootstrap: []
