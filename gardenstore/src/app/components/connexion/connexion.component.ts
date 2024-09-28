@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {Form,FormBuilder,FormGroup,FormsModule,ReactiveFormsModule,Validators} from '@angular/forms';
+import {Form,UntypedFormBuilder,UntypedFormGroup,FormsModule,ReactiveFormsModule,Validators} from '@angular/forms';
 import { Router} from '@angular/router';
 import { AuthService } from '../../services/auth-service.service';
 import { Component, ElementRef, Input } from '@angular/core';
@@ -14,7 +14,7 @@ import { Component, ElementRef, Input } from '@angular/core';
 
 export class ConnexionComponent {
   
-  loginForm! :FormGroup;
+  loginForm! :UntypedFormGroup;
   data!: Form;
   role: string = '';
   password: string = '';
@@ -24,7 +24,7 @@ export class ConnexionComponent {
   constructor(
     
     private router: Router,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private service: AuthService
   ) {{
     this.Formulaire();

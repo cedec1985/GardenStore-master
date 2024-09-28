@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { PanierService } from '../../services/panier.service';
 import { CommonModule } from '@angular/common';
@@ -13,7 +13,7 @@ import { LivreurService } from '../../services/livreur.service';
   imports :[CommonModule,ReactiveFormsModule,FormsModule,RouterModule],
 })
 export class AchattermineComponent implements OnInit{
-  registerForm!: FormGroup;
+  registerForm!: UntypedFormGroup;
   submitted = false;
   cartItems: any[] = [];
   frais:number = 3.00;
@@ -23,7 +23,7 @@ export class AchattermineComponent implements OnInit{
 
  mobNumberPattern = "^0[\d]{8}$";                                      // Numero de téléphone à 9 chiffres commençant par 
 
-  constructor(private formBuilder: FormBuilder,private panier: PanierService, private router: Router, private readonly $livreur: LivreurService) { 
+  constructor(private formBuilder: UntypedFormBuilder,private panier: PanierService, private router: Router, private readonly $livreur: LivreurService) { 
     this.cartItems = this.panier.getItemsFromCart();
     this.cartItems.forEach(element => console.log('product price : ',element.price));
     this.cartItems.forEach(element => this.soustotal += element.price);

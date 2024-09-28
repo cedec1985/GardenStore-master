@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Form, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Form, UntypedFormBuilder, UntypedFormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterAPIForm, RegisterForm } from '../../models/user-create.form';
 import { AuthService } from '../../services/auth-service.service';
@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth-service.service';
 })
 export class RegisterComponent {
 
-    inscriptionForm!: FormGroup;
+    inscriptionForm!: UntypedFormGroup;
     inscriptionData!: Form;
     email!: string;
     password!: string;
@@ -28,7 +28,7 @@ export class RegisterComponent {
     numero!: string;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private auth: AuthService,
     private router: Router,
   
