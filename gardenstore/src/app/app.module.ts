@@ -39,7 +39,7 @@ import { HttpClient} from '@angular/common/http';
 @NgModule({
   declarations: [],
   
-  imports: [AppComponent,NavbarComponent, HomeComponent,ReactiveFormsModule,FormsModule,ProfiluserRoutingModule,CommonModule,RouterModule,BrowserAnimationsModule,TableModule,
+  imports: [AppComponent,NavbarComponent, HomeComponent,ReactiveFormsModule,FormsModule,ProfiluserRoutingModule,CommonModule,RouterModule,BrowserAnimationsModule,TableModule,HttpClient,
     RegisterComponent,ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,
 ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
