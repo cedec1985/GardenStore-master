@@ -39,6 +39,7 @@ import { ContactComponent } from './components/contact/contact.component';
        HomeComponent,NavbarComponent, CartComponent,AdminComponent,ConnexionComponent, AchattermineComponent,ConfirmationComponent,ProduitresultComponent,StockEpuiseDirective,FormsModule,ReactiveFormsModule,
         RegisterComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,CategoryComponent,ProfilUserComponent,StockEpuiseDirective,ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,ContactComponent]
       })
+      
 
 export class AppComponent implements OnInit{
   panier! :any;
