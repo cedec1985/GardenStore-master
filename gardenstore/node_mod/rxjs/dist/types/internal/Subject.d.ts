@@ -1,4 +1,4 @@
-import { Operator } from './Operator';
+import { Operator } from '../../../src/internal/Operator';
 import { Observable } from './Observable';
 import { Observer, SubscriptionLike } from './types';
 /**

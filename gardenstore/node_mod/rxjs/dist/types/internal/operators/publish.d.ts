@@ -1,6 +1,6 @@
+import { ConnectableObservable } from '../../../../src/internal/observable/ConnectableObservable';
 import { Observable } from '../Observable';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { OperatorFunction, UnaryFunction, ObservableInput, ObservedValueOf } from '../types';
+import { ObservableInput, ObservedValueOf, OperatorFunction, UnaryFunction } from '../types';
 /**
  * Returns a connectable observable that, when connected, will multicast
  * all values through a single underlying {@link Subject} instance.

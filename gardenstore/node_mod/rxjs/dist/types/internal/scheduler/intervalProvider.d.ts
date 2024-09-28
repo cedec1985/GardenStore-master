@@ -1,4 +1,4 @@
-import type { TimerHandle } from './timerHandle';
+import type { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
 declare type SetIntervalFunction = (handler: () => void, timeout?: number, ...args: any[]) => TimerHandle;
 declare type ClearIntervalFunction = (handle: TimerHandle) => void;
 interface IntervalProvider {
@@ -10,5 +10,5 @@ interface IntervalProvider {
     } | undefined;
 }
 export declare const intervalProvider: IntervalProvider;
-export {};
+export { };
 //# sourceMappingURL=intervalProvider.d.ts.map

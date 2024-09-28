@@ -1,9 +1,9 @@
+import { VirtualTimeScheduler } from '../../../../src/internal/scheduler/VirtualTimeScheduler';
+import { ColdObservable } from '../../../../src/internal/testing/ColdObservable';
+import { HotObservable } from '../../../../src/internal/testing/HotObservable';
+import { SubscriptionLog } from '../../../../src/internal/testing/SubscriptionLog';
+import { TestMessage } from '../../../../src/internal/testing/TestMessage';
 import { Observable } from '../Observable';
-import { ColdObservable } from './ColdObservable';
-import { HotObservable } from './HotObservable';
-import { TestMessage } from './TestMessage';
-import { SubscriptionLog } from './SubscriptionLog';
-import { VirtualTimeScheduler } from '../scheduler/VirtualTimeScheduler';
 export interface RunHelpers {
     cold: typeof TestScheduler.prototype.createColdObservable;
     hot: typeof TestScheduler.prototype.createHotObservable;

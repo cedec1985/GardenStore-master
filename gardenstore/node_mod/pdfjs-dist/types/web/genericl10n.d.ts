@@ -1,4 +1,4 @@
-export type IL10n = import("./interfaces").IL10n;
+export type IL10n = import("./interfaces.js").IL10n;
 /**
  * @implements {IL10n}
  */
@@ -18,3 +18,4 @@ export class GenericL10n extends L10n implements IL10n {
     constructor(lang: any);
 }
 import { L10n } from "./l10n.js";
+

@@ -1,7 +1,7 @@
-import { AsyncAction } from './AsyncAction';
-import { AsapScheduler } from './AsapScheduler';
+import { AsapScheduler } from '../../../../src/internal/scheduler/AsapScheduler';
+import { AsyncAction } from '../../../../src/internal/scheduler/AsyncAction';
+import { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
 import { SchedulerAction } from '../types';
-import { TimerHandle } from './timerHandle';
 export declare class AsapAction<T> extends AsyncAction<T> {
     protected scheduler: AsapScheduler;
     protected work: (this: SchedulerAction<T>, state?: T) => void;

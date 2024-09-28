@@ -1,4 +1,4 @@
-import { Subscriber } from './Subscriber';
+import { Subscriber } from '../../../src/internal/Subscriber';
 import { ObservableNotification } from './types';
 /**
  * The {@link GlobalConfig} object for RxJS. It is used to configure things

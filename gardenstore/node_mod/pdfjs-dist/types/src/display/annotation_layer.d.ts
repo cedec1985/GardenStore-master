@@ -1,13 +1,13 @@
-export type PDFPageProxy = import("./api").PDFPageProxy;
-export type PageViewport = import("./display_utils").PageViewport;
+export type PDFPageProxy = import("./api.js").PDFPageProxy;
+export type PageViewport = import("./display_utils.js").PageViewport;
 export type TextAccessibilityManager = import("../../web/text_accessibility.js").TextAccessibilityManager;
-export type IDownloadManager = import("../../web/interfaces").IDownloadManager;
-export type IPDFLinkService = import("../../web/interfaces").IPDFLinkService;
+export type IDownloadManager = import("../../web/interfaces.js").IDownloadManager;
+export type IPDFLinkService = import("../../web/interfaces.js").IPDFLinkService;
 export type AnnotationElementParameters = {
     data: Object;
     layer: HTMLDivElement;
     linkService: IPDFLinkService;
-    downloadManager?: import("../../web/interfaces").IDownloadManager | undefined;
+    downloadManager?: import("../../web/interfaces.js").IDownloadManager | undefined;
     annotationStorage?: AnnotationStorage | undefined;
     /**
      * - Path for image resources, mainly
@@ -207,4 +207,5 @@ declare class AnnotationElement {
     _editOnDoubleClick(): void;
     #private;
 }
-export {};
+export { };
+

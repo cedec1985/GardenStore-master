@@ -1,5 +1,5 @@
+import { Subscriber } from '../../../../src/internal/Subscriber';
 import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
 import { OperatorFunction, TruthyTypesOf } from '../types';
 export declare function find<T>(predicate: BooleanConstructor): OperatorFunction<T, TruthyTypesOf<T>>;
 /** @deprecated Use a closure instead of a `thisArg`. Signatures accepting a `thisArg` will be removed in v8. */

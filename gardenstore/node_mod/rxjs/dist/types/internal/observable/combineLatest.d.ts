@@ -1,7 +1,7 @@
+import { AnyCatcher } from '../../../../src/internal/AnyCatcher';
+import { Subscriber } from '../../../../src/internal/Subscriber';
 import { Observable } from '../Observable';
-import { ObservableInput, SchedulerLike, ObservedValueOf, ObservableInputTuple } from '../types';
-import { Subscriber } from '../Subscriber';
-import { AnyCatcher } from '../AnyCatcher';
+import { ObservableInput, ObservableInputTuple, ObservedValueOf, SchedulerLike } from '../types';
 /**
  * You have passed `any` here, we can't figure out if it is
  * an array or an object, so you're getting `unknown`. Use better types.

@@ -1,5 +1,5 @@
-import { Scheduler } from '../Scheduler';
-import { Subscription } from '../Subscription';
+import { Scheduler } from '../../../../src/internal/Scheduler';
+import { Subscription } from '../../../../src/internal/Subscription';
 import { SchedulerAction } from '../types';
 /**
  * A unit of work to be executed in a `scheduler`. An action is typically

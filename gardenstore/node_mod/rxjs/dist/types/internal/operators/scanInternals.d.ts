@@ -1,5 +1,5 @@
+import { Subscriber } from '../../../../src/internal/Subscriber';
 import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
 /**
  * A basic scan operation. This is used for `scan` and `reduce`.
  * @param accumulator The accumulator to use

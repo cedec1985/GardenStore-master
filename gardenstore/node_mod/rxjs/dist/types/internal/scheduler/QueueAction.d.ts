@@ -1,8 +1,8 @@
-import { AsyncAction } from './AsyncAction';
-import { Subscription } from '../Subscription';
-import { QueueScheduler } from './QueueScheduler';
+import { AsyncAction } from '../../../../src/internal/scheduler/AsyncAction';
+import { QueueScheduler } from '../../../../src/internal/scheduler/QueueScheduler';
+import { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
+import { Subscription } from '../../../../src/internal/Subscription';
 import { SchedulerAction } from '../types';
-import { TimerHandle } from './timerHandle';
 export declare class QueueAction<T> extends AsyncAction<T> {
     protected scheduler: QueueScheduler;
     protected work: (this: SchedulerAction<T>, state?: T) => void;

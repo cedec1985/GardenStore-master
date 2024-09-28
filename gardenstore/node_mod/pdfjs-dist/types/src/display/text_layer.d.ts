@@ -1,5 +1,5 @@
-export type PageViewport = import("./display_utils").PageViewport;
-export type TextContent = import("./api").TextContent;
+export type PageViewport = import("./display_utils.js").PageViewport;
+export type TextContent = import("./api.js").TextContent;
 /**
  * Text layer render parameters.
  */
@@ -149,3 +149,4 @@ export class TextLayerRenderTask {
  */
 export function updateTextLayer({ container, viewport, textDivs, textDivProperties, isOffscreenCanvasSupported, mustRotate, mustRescale, }: TextLayerUpdateParameters): undefined;
 import { PromiseCapability } from "../shared/util.js";
+

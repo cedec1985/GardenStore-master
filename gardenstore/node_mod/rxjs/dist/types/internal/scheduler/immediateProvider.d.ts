@@ -1,4 +1,4 @@
-import type { TimerHandle } from './timerHandle';
+import type { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
 declare type SetImmediateFunction = (handler: () => void, ...args: any[]) => TimerHandle;
 declare type ClearImmediateFunction = (handle: TimerHandle) => void;
 interface ImmediateProvider {
@@ -10,5 +10,5 @@ interface ImmediateProvider {
     } | undefined;
 }
 export declare const immediateProvider: ImmediateProvider;
-export {};
+export { };
 //# sourceMappingURL=immediateProvider.d.ts.map

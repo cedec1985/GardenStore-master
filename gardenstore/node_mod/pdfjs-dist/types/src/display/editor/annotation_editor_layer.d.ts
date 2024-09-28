@@ -1,7 +1,7 @@
 export type AnnotationEditorUIManager = import("./tools.js").AnnotationEditorUIManager;
 export type PageViewport = import("../display_utils.js").PageViewport;
 export type TextAccessibilityManager = import("../../../web/text_accessibility.js").TextAccessibilityManager;
-export type IL10n = import("../../../web/interfaces").IL10n;
+export type IL10n = import("../../../web/interfaces.js").IL10n;
 export type AnnotationLayer = import("../annotation_layer.js").AnnotationLayer;
 export type AnnotationEditorLayerOptions = {
     mode: Object;
@@ -199,3 +199,4 @@ import { AnnotationEditor } from "./editor.js";
 import { FreeTextEditor } from "./freetext.js";
 import { InkEditor } from "./ink.js";
 import { StampEditor } from "./stamp.js";
+

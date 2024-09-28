@@ -1,6 +1,6 @@
+import { AnyCatcher } from '../../../../src/internal/AnyCatcher';
 import { Observable } from '../Observable';
-import { ObservedValueOf, ObservableInputTuple, ObservableInput } from '../types';
-import { AnyCatcher } from '../AnyCatcher';
+import { ObservableInput, ObservableInputTuple, ObservedValueOf } from '../types';
 /**
  * You have passed `any` here, we can't figure out if it is
  * an array or an object, so you're getting `unknown`. Use better types.

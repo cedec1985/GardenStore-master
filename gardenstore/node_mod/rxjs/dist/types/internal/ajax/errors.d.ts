@@ -1,4 +1,4 @@
-import { AjaxRequest } from './types';
+import { AjaxRequest } from '../../../../src/internal/ajax/types';
 /**
  * A normalized AJAX error.
  *

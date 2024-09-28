@@ -1,8 +1,8 @@
-import { AsyncAction } from './AsyncAction';
-import { Subscription } from '../Subscription';
-import { AsyncScheduler } from './AsyncScheduler';
+import { AsyncAction } from '../../../../src/internal/scheduler/AsyncAction';
+import { AsyncScheduler } from '../../../../src/internal/scheduler/AsyncScheduler';
+import { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
+import { Subscription } from '../../../../src/internal/Subscription';
 import { SchedulerAction } from '../types';
-import { TimerHandle } from './timerHandle';
 export declare class VirtualTimeScheduler extends AsyncScheduler {
     maxFrames: number;
     /** @deprecated Not used in VirtualTimeScheduler directly. Will be removed in v8. */

@@ -1,8 +1,8 @@
-import { Subject } from '../Subject';
-import { Scheduler } from '../Scheduler';
-import { TestMessage } from './TestMessage';
-import { SubscriptionLog } from './SubscriptionLog';
-import { SubscriptionLoggable } from './SubscriptionLoggable';
+import { Scheduler } from '../../../../src/internal/Scheduler';
+import { Subject } from '../../../../src/internal/Subject';
+import { SubscriptionLog } from '../../../../src/internal/testing/SubscriptionLog';
+import { SubscriptionLoggable } from '../../../../src/internal/testing/SubscriptionLoggable';
+import { TestMessage } from '../../../../src/internal/testing/TestMessage';
 export declare class HotObservable<T> extends Subject<T> implements SubscriptionLoggable {
     messages: TestMessage[];
     subscriptions: SubscriptionLog[];

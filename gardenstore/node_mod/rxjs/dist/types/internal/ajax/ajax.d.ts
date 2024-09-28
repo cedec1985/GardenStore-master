@@ -1,6 +1,6 @@
+import { AjaxResponse } from '../../../../src/internal/ajax/AjaxResponse';
+import { AjaxConfig } from '../../../../src/internal/ajax/types';
 import { Observable } from '../Observable';
-import { AjaxConfig } from './types';
-import { AjaxResponse } from './AjaxResponse';
 export interface AjaxCreationMethod {
     /**
      * Creates an observable that will perform an AJAX request using the

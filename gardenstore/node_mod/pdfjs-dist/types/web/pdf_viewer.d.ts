@@ -1,13 +1,13 @@
-export type PDFDocumentProxy = import("../src/display/api").PDFDocumentProxy;
-export type PDFPageProxy = import("../src/display/api").PDFPageProxy;
-export type PageViewport = import("../src/display/display_utils").PageViewport;
-export type OptionalContentConfig = import("../src/display/optional_content_config").OptionalContentConfig;
-export type EventBus = import("./event_utils").EventBus;
-export type IDownloadManager = import("./interfaces").IDownloadManager;
-export type IL10n = import("./interfaces").IL10n;
-export type IPDFLinkService = import("./interfaces").IPDFLinkService;
-export type PDFFindController = import("./pdf_find_controller").PDFFindController;
-export type PDFScriptingManager = import("./pdf_scripting_manager").PDFScriptingManager;
+export type PDFDocumentProxy = import("../src/display/api.js").PDFDocumentProxy;
+export type PDFPageProxy = import("../src/display/api.js").PDFPageProxy;
+export type PageViewport = import("../src/display/display_utils.js").PageViewport;
+export type OptionalContentConfig = import("../src/display/optional_content_config.js").OptionalContentConfig;
+export type EventBus = import("./event_utils.js").EventBus;
+export type IDownloadManager = import("./interfaces.js").IDownloadManager;
+export type IL10n = import("./interfaces.js").IL10n;
+export type IPDFLinkService = import("./interfaces.js").IPDFLinkService;
+export type PDFFindController = import("./pdf_find_controller.js").PDFFindController;
+export type PDFScriptingManager = import("./pdf_scripting_manager.js").PDFScriptingManager;
 export type PDFViewerOptions = {
     /**
      * - The container for the viewer element.
@@ -24,22 +24,22 @@ export type PDFViewerOptions = {
     /**
      * - The navigation/linking service.
      */
-    linkService?: import("./interfaces").IPDFLinkService | undefined;
+    linkService?: import("./interfaces.js").IPDFLinkService | undefined;
     /**
      * - The download manager
      * component.
      */
-    downloadManager?: import("./interfaces").IDownloadManager | undefined;
+    downloadManager?: import("./interfaces.js").IDownloadManager | undefined;
     /**
      * - The find controller
      * component.
      */
-    findController?: import("./pdf_find_controller").PDFFindController | undefined;
+    findController?: import("./pdf_find_controller.js").PDFFindController | undefined;
     /**
      * - The scripting manager
      * component.
      */
-    scriptingManager?: import("./pdf_scripting_manager").PDFScriptingManager | undefined;
+    scriptingManager?: import("./pdf_scripting_manager.js").PDFScriptingManager | undefined;
     /**
      * - The rendering queue object.
      */
@@ -93,7 +93,7 @@ export type PDFViewerOptions = {
     /**
      * - Localization service.
      */
-    l10n?: import("./interfaces").IL10n | undefined;
+    l10n?: import("./interfaces.js").IL10n | undefined;
     /**
      * - Enables PDF document permissions,
      * when they exist. The default value is `false`.
@@ -178,11 +178,11 @@ export class PDFViewer {
     constructor(options: PDFViewerOptions);
     container: HTMLDivElement;
     viewer: Element | null;
-    eventBus: import("./event_utils").EventBus;
-    linkService: import("./interfaces").IPDFLinkService | SimpleLinkService;
-    downloadManager: import("./interfaces").IDownloadManager | null;
-    findController: import("./pdf_find_controller").PDFFindController | null;
-    _scriptingManager: import("./pdf_scripting_manager").PDFScriptingManager | null;
+    eventBus: import("./event_utils.js").EventBus;
+    linkService: import("./interfaces.js").IPDFLinkService | SimpleLinkService;
+    downloadManager: import("./interfaces.js").IDownloadManager | null;
+    findController: import("./pdf_find_controller.js").PDFFindController | null;
+    _scriptingManager: import("./pdf_scripting_manager.js").PDFScriptingManager | null;
     imageResourcesPath: string;
     enablePrintAutoRotate: boolean;
     removePageBorders: boolean | undefined;
@@ -281,9 +281,9 @@ export class PDFViewer {
      * @param {PDFDocumentProxy} pdfDocument
      */
     setDocument(pdfDocument: PDFDocumentProxy): void;
-    pdfDocument: import("../src/display/api").PDFDocumentProxy | undefined;
+    pdfDocument: import("../src/display/api.js").PDFDocumentProxy | undefined;
     _scrollMode: any;
-    _optionalContentConfigPromise: Promise<import("../src/display/optional_content_config").OptionalContentConfig> | null | undefined;
+    _optionalContentConfigPromise: Promise<import("../src/display/optional_content_config.js").OptionalContentConfig> | null | undefined;
     /**
      * @param {Array|null} labels
      */
@@ -378,11 +378,11 @@ export class PDFViewer {
      * @param {Promise<OptionalContentConfig>} promise - A promise that is
      *   resolved with an {@link OptionalContentConfig} instance.
      */
-    set optionalContentConfigPromise(promise: Promise<import("../src/display/optional_content_config").OptionalContentConfig | null>);
+    set optionalContentConfigPromise(promise: Promise<import("../src/display/optional_content_config.js").OptionalContentConfig | null>);
     /**
      * @type {Promise<OptionalContentConfig | null>}
      */
-    get optionalContentConfigPromise(): Promise<import("../src/display/optional_content_config").OptionalContentConfig | null>;
+    get optionalContentConfigPromise(): Promise<import("../src/display/optional_content_config.js").OptionalContentConfig | null>;
     /**
      * @param {number} mode - The direction in which the document pages should be
      *   laid out within the scrolling container.
@@ -488,6 +488,7 @@ export class PDFViewer {
     refresh(noUpdate?: boolean, updateArgs?: any): void;
     #private;
 }
-import { PDFRenderingQueue } from "./pdf_rendering_queue.js";
+import { PromiseCapability } from "../src/pdf.js";
 import { SimpleLinkService } from "./pdf_link_service.js";
-import { PromiseCapability } from "../src/pdf";
+import { PDFRenderingQueue } from "./pdf_rendering_queue.js";
+

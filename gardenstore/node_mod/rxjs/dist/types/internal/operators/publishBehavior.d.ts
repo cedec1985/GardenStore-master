@@ -1,5 +1,5 @@
+import { ConnectableObservable } from '../../../../src/internal/observable/ConnectableObservable';
 import { Observable } from '../Observable';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
 import { UnaryFunction } from '../types';
 /**
  * Creates a {@link ConnectableObservable} that utilizes a {@link BehaviorSubject}.

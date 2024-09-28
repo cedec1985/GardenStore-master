@@ -1419,20 +1419,13 @@ export class RenderTask {
 }
 /** @type {string} */
 export const version: string;
-import { PageViewport } from "./display_utils.js";
-import { OptionalContentConfig } from "./optional_content_config.js";
-import { PrintAnnotationStorage } from "./annotation_storage.js";
-import { DOMCanvasFactory } from "./display_utils.js";
-import { NodeCanvasFactory } from "./node_utils";
-import { NodeCMapReaderFactory } from "./node_utils";
-import { DOMFilterFactory } from "./display_utils.js";
-import { NodeFilterFactory } from "./node_utils";
-import { NodeStandardFontDataFactory } from "./node_utils";
+import { MessageHandler } from "../shared/message_handler.js";
 import { PromiseCapability } from "../shared/util.js";
-import { AnnotationStorage } from "./annotation_storage.js";
-import { info } from "../shared/util.js";
+import { AnnotationStorage, PrintAnnotationStorage } from "./annotation_storage.js";
+import { DOMCanvasFactory, DOMFilterFactory, PageViewport, StatTimer } from "./display_utils.js";
 import { Metadata } from "./metadata.js";
-import { StatTimer } from "./display_utils.js";
+import { NodeCanvasFactory, NodeCMapReaderFactory, NodeFilterFactory, NodeStandardFontDataFactory } from "./node_utils.js";
+import { OptionalContentConfig } from "./optional_content_config.js";
 /**
  * A PDF document and page is built of many objects. E.g. there are objects for
  * fonts, images, rendering code, etc. These objects may get processed inside of
@@ -1467,5 +1460,5 @@ declare class PDFObjects {
     clear(): void;
     #private;
 }
-import { MessageHandler } from "../shared/message_handler.js";
-export {};
+export { };
+

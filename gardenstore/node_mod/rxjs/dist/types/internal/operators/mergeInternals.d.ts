@@ -1,5 +1,5 @@
+import { Subscriber } from '../../../../src/internal/Subscriber';
 import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
 import { ObservableInput, SchedulerLike } from '../types';
 /**
  * A process embodying the general "merge" strategy. This is used in

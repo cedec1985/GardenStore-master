@@ -1,4 +1,4 @@
-import { Subscription } from '../Subscription';
+import { Subscription } from '../../../../src/internal/Subscription';
 interface AnimationFrameProvider {
     schedule(callback: FrameRequestCallback): Subscription;
     requestAnimationFrame: typeof requestAnimationFrame;
@@ -9,5 +9,5 @@ interface AnimationFrameProvider {
     } | undefined;
 }
 export declare const animationFrameProvider: AnimationFrameProvider;
-export {};
+export { };
 //# sourceMappingURL=animationFrameProvider.d.ts.map

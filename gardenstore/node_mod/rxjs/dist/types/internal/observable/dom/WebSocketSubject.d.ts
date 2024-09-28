@@ -1,7 +1,7 @@
-import { AnonymousSubject } from '../../Subject';
+import { Operator } from '../../../../../src/internal/Operator';
+import { AnonymousSubject } from '../../../../../src/internal/Subject';
 import { Observable } from '../../Observable';
-import { Operator } from '../../Operator';
-import { Observer, NextObserver } from '../../types';
+import { NextObserver, Observer } from '../../types';
 /**
  * WebSocketSubjectConfig is a plain Object that allows us to make our
  * webSocket configurable.

@@ -1,9 +1,9 @@
-export type PageViewport = import("../src/display/display_utils").PageViewport;
-export type OptionalContentConfig = import("../src/display/optional_content_config").OptionalContentConfig;
-export type EventBus = import("./event_utils").EventBus;
-export type IL10n = import("./interfaces").IL10n;
-export type IRenderableView = import("./interfaces").IRenderableView;
-export type PDFRenderingQueue = import("./pdf_rendering_queue").PDFRenderingQueue;
+export type PageViewport = import("../src/display/display_utils.js").PageViewport;
+export type OptionalContentConfig = import("../src/display/optional_content_config.js").OptionalContentConfig;
+export type EventBus = import("./event_utils.js").EventBus;
+export type IL10n = import("./interfaces.js").IL10n;
+export type IRenderableView = import("./interfaces.js").IRenderableView;
+export type PDFRenderingQueue = import("./pdf_rendering_queue.js").PDFRenderingQueue;
 export type PDFPageViewOptions = {
     /**
      * - The viewer element.
@@ -30,11 +30,11 @@ export type PDFPageViewOptions = {
      * A promise that is resolved with an {@link OptionalContentConfig } instance.
      * The default value is `null`.
      */
-    optionalContentConfigPromise?: Promise<import("../src/display/optional_content_config").OptionalContentConfig> | undefined;
+    optionalContentConfigPromise?: Promise<import("../src/display/optional_content_config.js").OptionalContentConfig> | undefined;
     /**
      * - The rendering queue object.
      */
-    renderingQueue?: import("./pdf_rendering_queue").PDFRenderingQueue | undefined;
+    renderingQueue?: import("./pdf_rendering_queue.js").PDFRenderingQueue | undefined;
     /**
      * - Controls if the text layer used for
      * selection and searching is created. The constants from {TextLayerMode}
@@ -74,7 +74,7 @@ export type PDFPageViewOptions = {
     /**
      * - Localization service.
      */
-    l10n?: import("./interfaces").IL10n | undefined;
+    l10n?: import("./interfaces.js").IL10n | undefined;
     /**
      * - The object that is used to lookup
      * the necessary layer-properties.
@@ -95,15 +95,15 @@ export class PDFPageView implements IRenderableView {
     pageLabel: string | null;
     rotation: number;
     scale: number;
-    viewport: import("../src/display/display_utils").PageViewport;
+    viewport: import("../src/display/display_utils.js").PageViewport;
     pdfPageRotate: number;
-    _optionalContentConfigPromise: Promise<import("../src/display/optional_content_config").OptionalContentConfig> | null;
+    _optionalContentConfigPromise: Promise<import("../src/display/optional_content_config.js").OptionalContentConfig> | null;
     imageResourcesPath: string;
     isOffscreenCanvasSupported: boolean;
     maxCanvasPixels: any;
     pageColors: Object | null;
-    eventBus: import("./event_utils").EventBus;
-    renderingQueue: import("./pdf_rendering_queue").PDFRenderingQueue | undefined;
+    eventBus: import("./event_utils.js").EventBus;
+    renderingQueue: import("./pdf_rendering_queue.js").PDFRenderingQueue | undefined;
     l10n: {
         getLanguage(): any;
         getDirection(): any;
@@ -165,7 +165,7 @@ export class PDFPageView implements IRenderableView {
         /**
          * A promise that is resolved with an {@link OptionalContentConfig }instance. The default value is `null`.
          */
-        optionalContentConfigPromise?: Promise<import("../src/display/optional_content_config").OptionalContentConfig> | undefined;
+        optionalContentConfigPromise?: Promise<import("../src/display/optional_content_config.js").OptionalContentConfig> | undefined;
         drawingDelay?: number | undefined;
     }): void;
     /**
@@ -204,8 +204,9 @@ export class PDFPageView implements IRenderableView {
     get thumbnailCanvas(): HTMLCanvasElement | null | undefined;
     #private;
 }
-import { AnnotationLayerBuilder } from "./annotation_layer_builder.js";
 import { AnnotationEditorLayerBuilder } from "./annotation_editor_layer_builder.js";
+import { AnnotationLayerBuilder } from "./annotation_layer_builder.js";
 import { TextLayerBuilder } from "./text_layer_builder.js";
-import { XfaLayerBuilder } from "./xfa_layer_builder.js";
 import { OutputScale } from "./ui_utils.js";
+import { XfaLayerBuilder } from "./xfa_layer_builder.js";
+

@@ -1,6 +1,6 @@
-import { Subject } from '../Subject';
+import { Subject } from '../../../../src/internal/Subject';
+import { Subscription } from '../../../../src/internal/Subscription';
 import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
 /**
  * @class ConnectableObservable<T>
  * @deprecated Will be removed in v8. Use {@link connectable} to create a connectable observable.

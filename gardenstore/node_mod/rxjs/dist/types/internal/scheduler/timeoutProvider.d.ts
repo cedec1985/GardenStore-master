@@ -1,4 +1,4 @@
-import type { TimerHandle } from './timerHandle';
+import type { TimerHandle } from '../../../../src/internal/scheduler/timerHandle';
 declare type SetTimeoutFunction = (handler: () => void, timeout?: number, ...args: any[]) => TimerHandle;
 declare type ClearTimeoutFunction = (handle: TimerHandle) => void;
 interface TimeoutProvider {
@@ -10,5 +10,5 @@ interface TimeoutProvider {
     } | undefined;
 }
 export declare const timeoutProvider: TimeoutProvider;
-export {};
+export { };
 //# sourceMappingURL=timeoutProvider.d.ts.map

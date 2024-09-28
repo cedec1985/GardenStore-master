@@ -1,5 +1,5 @@
+import { Subscriber } from '../../../../src/internal/Subscriber';
 import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
 import { OperatorFunction } from '../types';
 /**
  * Used to determine if an object is an Observable with a lift function.

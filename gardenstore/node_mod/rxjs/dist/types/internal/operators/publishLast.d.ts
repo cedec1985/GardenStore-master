@@ -1,5 +1,5 @@
+import { ConnectableObservable } from '../../../../src/internal/observable/ConnectableObservable';
 import { Observable } from '../Observable';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
 import { UnaryFunction } from '../types';
 /**
  * Returns a connectable observable sequence that shares a single subscription to the

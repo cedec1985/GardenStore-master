@@ -1,4 +1,4 @@
-import { Subscriber } from './Subscriber';
+import { Subscriber } from '../../../src/internal/Subscriber';
 import { TeardownLogic } from './types';
 /***
  * @deprecated Internal implementation detail, do not use directly. Will be made internal in v8.

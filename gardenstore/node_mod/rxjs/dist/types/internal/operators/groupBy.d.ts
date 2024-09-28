@@ -1,5 +1,5 @@
+import { Subject } from '../../../../src/internal/Subject';
 import { Observable } from '../Observable';
-import { Subject } from '../Subject';
 import { ObservableInput, OperatorFunction, SubjectLike } from '../types';
 export interface BasicGroupByOptions<K, T> {
     element?: undefined;

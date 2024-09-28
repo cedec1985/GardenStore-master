@@ -1,7 +1,7 @@
-import { createOperatorSubscriber } from '../../operators/OperatorSubscriber';
 import { Observable } from '../../Observable';
-import { innerFrom } from '../../observable/innerFrom';
+import { createOperatorSubscriber } from '../../operators/OperatorSubscriber';
 import { ObservableInput } from '../../types';
+import { innerFrom } from '../innerFrom';
 
 export function fromFetch<T>(
   input: string | Request,

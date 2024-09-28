@@ -1,7 +1,7 @@
-import { Subject } from '../Subject';
+import { ConnectableObservable } from '../../../../src/internal/observable/ConnectableObservable';
+import { Subject } from '../../../../src/internal/Subject';
 import { Observable } from '../Observable';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { OperatorFunction, UnaryFunction, ObservedValueOf, ObservableInput } from '../types';
+import { ObservableInput, ObservedValueOf, OperatorFunction, UnaryFunction } from '../types';
 /**
  * An operator that creates a {@link ConnectableObservable}, that when connected,
  * with the `connect` method, will use the provided subject to multicast the values
