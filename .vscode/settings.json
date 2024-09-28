@@ -2,5 +2,14 @@
     "java.compile.nullAnalysis.mode": "disabled",
     "cSpell.words": [
         "primeng"
-    ]
+    ],
+    "dotnetAcquisitionExtension.allowInvalidPaths": true,
+    "dotnetAcquisitionExtension.enablePreviewFeatures": true,
+    "angular.log": "normal",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "plantuml.diagramsRoot": "C:\\Users\\cedri\\OneDrive\\Documents\\GardenStore-master\\PlantUML",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "sqlDatabaseProjects.enablePreviewFeatures": true,
+    "debug.javascript.autoAttachFilter": "smart",
+    "npm.enableRunFromFolder": true
 }
