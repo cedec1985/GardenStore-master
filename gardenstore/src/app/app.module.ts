@@ -22,7 +22,6 @@ import { ProduitresultComponent } from './components/produitresult/produitresult
 import { ProfilUserDisplayComponent } from './components/profiluser/profiluser-display/profiluser-display.component';
 import { ProfiluserRoutingModule } from './components/profiluser/profiluser-routing.module';
 import { ProfilUserComponent } from './components/profiluser/profiluser.component';
-import { ProfiluserModule } from './components/profiluser/profiluser.module';
 import { RegisterComponent } from './components/register/register.component';
 import { StockEpuiseDirective } from './directives/stockEpuise.directive';
 import { AuthService } from './services/auth-service.service';
@@ -40,7 +39,7 @@ import { HttpClient} from '@angular/common/http';
 @NgModule({
   declarations: [],
   
-  imports: [AppComponent,NavbarComponent, HomeComponent,ReactiveFormsModule,FormsModule,
+  imports: [AppComponent,NavbarComponent, HomeComponent,ReactiveFormsModule,FormsModule,ProfiluserRoutingModule,CommonModule,RouterModule,BrowserAnimationsModule,TableModule,
     RegisterComponent,ConnexionComponent,CartComponent,AdminComponent,OutillageComponent,MobilierComponent,PlantesComponent,AccessoiresComponent,
     AchattermineComponent,ConfirmationComponent,ProduitresultComponent,CategoryComponent, ProfilUserComponent,
 ProductDetailsComponent,OutillagedetailsComponent,MobilierdetailsComponent,PlantesdetailsComponent,AccessoiresdetailsComponent,StockEpuiseDirective,ContactComponent,ProfilUserDisplayComponent],
